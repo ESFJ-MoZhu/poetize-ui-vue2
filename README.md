@@ -48,6 +48,8 @@ Vue3（IM 聊天室系统）是非必须的。如果部署，则需要依赖博�
   },
 ```
 (Linux设置环境变量使用export，同时&符号在Linux中是后台运行，需改为&&)
+
+
 Vue2：
 1. npm install
 2. npm run serve
