@@ -37,6 +37,17 @@ Vue3（IM 聊天室系统）是非必须的。如果部署，则需要依赖博�
 - 七牛云登录/注册地址（文件服务/CDN）：https://s.qiniu.com/Mz6Z32
 
 ## 本地启动
+
+### 注意事项
+在`poetize-ui`文件夹中的`package.json`文件中，由于windows shell和Linux的差异，Linux用户需要将命令替换为
+```json
+  "scripts": {
+    "serve": "export NODE_OPTIONS=--openssl-legacy-provider && vue-cli-service serve",
+    "build": "export NODE_OPTIONS=--openssl-legacy-provider && vue-cli-service build",
+    "lint": "vue-cli-service lint"
+  },
+```
+(Linux设置环境变量使用export，同时&符号在Linux中是后台运行，需改为&&)
 Vue2：
 1. npm install
 2. npm run serve
